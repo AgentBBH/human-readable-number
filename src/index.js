@@ -3,6 +3,9 @@ module.exports = function toReadable (number) {
     let d = Math.floor(number / 10 % 10);
     let s = Math.floor(number / 100);
     let str ="";
+    
+    if (number === 0) return "zero";
+    
     switch (s) {
         case 1: 
             str += "one hundred";
